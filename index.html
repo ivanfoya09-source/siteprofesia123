@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Професія Веб-дизайнер</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00bcd4;
+        }
+
+        section {
+            padding: 30px;
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        img {
+            width: 300px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Професія Веб-дизайнер</h1>
+</header>
+
+<nav>
+    <a href="#" onclick="showTab('about')">Про професію</a>
+    <a href="#" onclick="showTab('skills')">Навички</a>
+    <a href="#" onclick="showTab('salary')">Зарплата</a>
+</nav>
+
+<section id="about" class="active">
+    <h2>Про професію</h2>
+    <p>
+        Веб-дизайнер — це спеціаліст, який створює зовнішній вигляд сайтів.
+        Він працює з кольорами, шрифтами, зображеннями та робить сайт зручним для користувачів.
+    </p>
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Веб-дизайн">
+</section>
+
+<section id="skills">
+    <h2>Необхідні навички</h2>
+    <ul>
+        <li>Знання HTML та CSS</li>
+        <li>Вміння працювати у Figma або Photoshop</li>
+        <li>Креативність</li>
+        <li>Розуміння UX/UI</li>
+    </ul>
+    <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d" alt="Навички">
+</section>
+
+<section id="salary">
+    <h2>Зарплата</h2>
+    <p>
+        Початківець може заробляти від 500$ на місяць.
+        Досвідчений веб-дизайнер — від 1500$ і більше.
+    </p>
+    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c" alt="Зарплата">
+</section>
+
+<footer>
+    <p>Сайт створений у 2026 році</p>
+</footer>
+
+<script>
+    function showTab(tabId) {
+        const sections = document.querySelectorAll("section");
+        sections.forEach(section => {
+            section.classList.remove("active");
+        });
+
+        document.getElementById(tabId).classList.add("active");
+    }
+</script>
+
+</body>
+</html>
